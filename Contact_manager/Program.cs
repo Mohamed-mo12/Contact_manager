@@ -11,8 +11,9 @@ namespace Contact_manager
         static void Main(string[] args)
         {
 
-            Users U1 = new Users();
-            U1.edit_number(1010670950,100550695);
+            Contact C1 = new Contact();
+            C1.AddUser("mohamed");
+            C1.Show_users();
 
 
             Console.ReadKey();

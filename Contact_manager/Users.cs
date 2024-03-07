@@ -28,7 +28,7 @@ namespace Contact_manager
         public Gender gender { get; set; }
 
         public string City { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set;}
 
         public List<string> Address { get { return address;} set { address = value;} }
 
@@ -56,7 +56,8 @@ namespace Contact_manager
         public void Add_phone(int number)
         {
 
-                Phone.Add(number); 
+                Phone.Add(number);
+            Console.WriteLine(" ssucssefully added ");
         }
 
 
@@ -113,8 +114,7 @@ namespace Contact_manager
                           
             }
 
-            
-            return 0;
+               return 0;
         }
 
 
@@ -130,7 +130,7 @@ namespace Contact_manager
             }
 
         }
-
+       
 
         public string edit_Email(string email, string newemail)
         {
@@ -140,6 +140,7 @@ namespace Contact_manager
                 if (email == Email[i])
                 {
                     Email[i] = newemail;
+                    return newemail; 
                 }
             }
 

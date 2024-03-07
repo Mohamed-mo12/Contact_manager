@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace Contact_manager
 {
-    class attribute
+    abstract class attribute
     {
         public virtual string Type { get; set; }
 
         public virtual string description { get; set; }
 
+
+
+        
+        
         
     }
 }

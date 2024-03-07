@@ -10,20 +10,17 @@ namespace Contact_manager
     {
         private List<string> users = new List<string>();
 
-        public List<string> User { get { return users; } private set { users = value; } }
+        public void AddUser(string add) {
 
-
-        public void add_user(string add) {
-
-            User.Add(add);
+            users.Add(add);
             Console.WriteLine($" yor are succcssefuly add the user {add}"); 
         }
 
         public List<string> delete_user(string delete)
         {
-            if (User.Contains(delete))
+            if (users.Contains(delete))
             {
-                User.Remove(delete);
+                users.Remove(delete);
                 Console.WriteLine(" you remove this user ");
             }
             else
@@ -31,7 +28,7 @@ namespace Contact_manager
                 Console.WriteLine($" {delete} not found ");
             }
 
-            return User; 
+            return users; 
         }
 
 
@@ -39,7 +36,7 @@ namespace Contact_manager
 
             Console.WriteLine(" this is All User in the list ");
 
-            foreach (var item in User)
+            foreach (var item in users)
             {
                 Console.WriteLine(item);
             }
@@ -49,22 +46,22 @@ namespace Contact_manager
 
         public void number_users() {
 
-            if (User.Count <= 0)
+            if (users.Count <= 0)
             {
                 Console.WriteLine(" there is no user  ");
             }
             else
             {
-                Console.WriteLine(User.Count());
+                Console.WriteLine(users.Count());
             }
 
         }
 
         public string search_user(string name) {
 
-            for (int i = 0; i < User.Count; i++)
+            for (int i = 0; i < users.Count; i++)
             {
-                if (User[i] == name)
+                if (users[i] == name)
                 {
                     return $"{name} is exist ";
                 }
